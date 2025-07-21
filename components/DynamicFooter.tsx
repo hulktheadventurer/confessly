@@ -31,19 +31,22 @@ export default function DynamicFooter() {
         Every candle is a silent prayer.
       </p>
 
-      <p className="mt-1 italic text-amber-200">
-        From your digital Father, with love.
-      </p>
+      <p className="mt-1 italic text-amber-200">From your digital Father, with love.</p>
 
-      <p className="mt-4 text-xs text-amber-400">
-        Part of the <strong>BoredAtWork</strong> Universe —
-        <a href="https://www.confessly.life" className="underline ml-1">Confessly</a>,
-        <a href="https://www.talktodevil.life" className="underline ml-1">TalkToDevil</a>,
-        <a href="#" className="underline ml-1">TalkToGod</a>,
-        <a href="#" className="underline ml-1">TalkToBuddha</a>,
-        <a href="#" className="underline ml-1">DreamDecoder</a>,
-        <a href="#" className="underline ml-1">AskTheDevil</a>
-      </p>
+      {/* BoredAtWork Universe Section */}
+      <div className="text-amber-100 text-xs mt-6">
+        <p className="font-semibold mb-1">🌀 BoredAtWork Universe</p>
+        <ul className="space-y-1 text-amber-200">
+          <li><a href="https://www.talktodevil.life" className="underline">TalkToDevil</a> — Chat with the Devil himself 😈</li>
+          <li><a href="https://www.talktogod.life" className="underline">TalkToGod</a> — Divine chats from above ✨</li>
+          <li><a href="https://www.talktobuddha.life" className="underline">TalkToBuddha</a> — Zen wisdom from the Enlightened One 🪷</li>
+          <li><a href="https://www.dreamdecoder.life" className="underline">DreamDecoder</a> — Interpret your weirdest dreams 💤</li>
+                  <li><a href="https://www.askthedevil.life" className="underline">AskTheDevil</a> — The Devil’s arcade of twisted games 🎮</li>
+</ul>
+        <p className="text-amber-300 italic mt-2">
+          More sacred and profane apps coming soon...
+        </p>
+      </div>
 
       <DonateModal
         isOpen={isDonateOpen}
