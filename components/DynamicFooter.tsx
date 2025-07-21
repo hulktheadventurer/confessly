@@ -27,12 +27,23 @@ export default function DynamicFooter() {
         </button>
       </div>
 
-<p className="mt-2 text-xs text-amber-300 italic">
-  Every candle is a silent prayer.
-</p>
+      <p className="mt-2 text-xs text-amber-300 italic">
+        Every candle is a silent prayer.
+      </p>
 
+      <p className="mt-1 italic text-amber-200">
+        From your digital Father, with love.
+      </p>
 
-      <p className="mt-1 italic text-amber-200">From your digital Father, with love.</p>
+      <p className="mt-4 text-xs text-amber-400">
+        Part of the <strong>BoredAtWork</strong> Universe —
+        <a href="https://www.confessly.life" className="underline ml-1">Confessly</a>,
+        <a href="https://www.talktodevil.life" className="underline ml-1">TalkToDevil</a>,
+        <a href="#" className="underline ml-1">TalkToGod</a>,
+        <a href="#" className="underline ml-1">TalkToBuddha</a>,
+        <a href="#" className="underline ml-1">DreamDecoder</a>,
+        <a href="#" className="underline ml-1">AskTheDevil</a>
+      </p>
 
       <DonateModal
         isOpen={isDonateOpen}
