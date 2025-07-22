@@ -11,6 +11,8 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [showDonateModal, setShowDonateModal] = useState(false);
   const [posted, setPosted] = useState(false);
+
+  const chatContainerRef = useRef<HTMLDivElement | null>(null);
   const responseEndRef = useRef<HTMLDivElement | null>(null);
 
   const handleSend = async () => {
@@ -69,7 +71,9 @@ export default function HomePage() {
   };
 
   useEffect(() => {
-    responseEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatContainerRef.current && responseEndRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
   }, [thread]);
 
   return (
@@ -79,6 +83,7 @@ export default function HomePage() {
       </h2>
 
       <div
+        ref={chatContainerRef}
         className={`bg-white shadow-xl rounded-2xl p-6 border border-amber-200 max-h-[60vh] overflow-y-auto flex flex-col ${
           thread.length === 0 ? 'justify-center min-h-[120px]' : 'space-y-3'
         }`}
